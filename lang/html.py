@@ -10,7 +10,7 @@ from ..utils import (
     is_filetype,
 )
 
-FILETYPES = (".html", ".jsx", ".erb", "js")
+FILETYPES = (".html", ".jsx", ".erb", ".js", ".njk")
 
 context = Context("html", func=is_filetype(FILETYPES))
 
@@ -97,12 +97,13 @@ context.keymap(
         "(tag | ellie) footer": CursorText("<footer>{.}</footer>"),
         "(tag | ellie) open footer": "<footer>",
         "(tag | ellie) close footer": "</footer>",
-        "(tag | ellie) div": CursorText("<div>{.}</div>"),
+        "(tag | ellie) div | divide": CursorText("<div>{.}</div>"),
         "(tag | ellie) open div": "<div>",
         "(tag | ellie) close div": "</div>",
         "(tag | ellie) span": CursorText("<span>{.}</span>"),
         "(tag | ellie) open span": "<span>",
         "(tag | ellie) close span": "</span>",
+        "(tag | ellie) form": CursorText("<form>{.}</form>"),
         "(tag | ellie) table": CursorText("<table>{.}</table>"),
         "(tag | ellie) table head": CursorText("<thead>{.}</thead>"),
         "(tag | ellie) table body": CursorText("<tbody>{.}</tbody>"),

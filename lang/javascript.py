@@ -10,7 +10,7 @@ from ..utils import (
     is_filetype,
 )
 
-JS_EXTENSIONS = (".js", ".jsx")
+JS_EXTENSIONS = (".js", ".jsx", ".njk")
 
 context = Context("javascript", func=is_filetype(JS_EXTENSIONS))
 
@@ -34,7 +34,7 @@ context.keymap(
         "static": "static ",
         "args": ["()", Key("left")],
         "index": ["[]", Key("left")],
-        "block": [" {}", Key("left enter enter up tab")],
+        # "block": [" {}", Key("left enter enter up tab")],
         "empty array": "[]",
         "empty object": "{}",
         "call": "()",
@@ -84,42 +84,56 @@ context.keymap(
         "axe": "ImportAxios",
         "require": "requireMOD",
         # commands for express
-        "express import": "ImportExpress",
-        "express initialize": "InitializeApplication",
-        "expressive initialize": "InitializeRouter",
-        "expressive use": "ExpressRouterUse",
-        "express use": "ExpressApplicationUse",
-        "express callback": "ExpressRouteCb",
-        "expressive route": "RouterRoute",
-        "express route": "ApplicationRoute",
+        # "express import": "ImportExpress",
+        # "express initialize": "InitializeApplication",
+        # "expressive initialize": "InitializeRouter",
+        # "expressive use": "ExpressRouterUse",
+        # "express use": "ExpressApplicationUse",
+        # "express callback": "ExpressRouteCb",
+        # "expressive route": "RouterRoute",
+        # "express route": "ApplicationRoute",
         # commands for sequelize
-        "model import": "ImportDB",
-        "model initialize": "DBInit",
-        "model equalize": "Sequelize",
-        "model nag": "allowNull",
+        # "model import": "ImportDB",
+        # "model initialize": "DBInit",
+        # "model equalize": "Sequelize",
+        # "model nag": "allowNull",
+
         # commands for es6 imports
         "import react": "import React from 'react';",
         "import prop types": "import PropTypes from 'prop-types';",
         "import CSS module": "import style from './style.module.scss';",
+        "import classNames": "import classNames from 'classnames';",
+        "import <dgndictation>": ["import ", text, " from ", Key("command right")],
 
         # commands for react
         "react fragment": ["<></>", Key("left left left")],
         "react tag": ["< />", Key("left left left")],
         "react clack": "onClick",
-        # need to add snippets for components
+
         "react component": ["React.Component ", Key("left")],
+        "react prop <dgndictation>": [text, "="],
+        "react you state ": "useState",
+        "react (use reducer | use reducer)": "useReducer",
+        "react (use context | theseContact)": "useContext",
+
+        "prop types upper": "PropTypes",
+        "prop types lower": "propTypes",
+
         # commands for react dom
-        "document import": "ImportDOM",
-        "document import hash": "ImportHash",
-        "document import browser": "ImportBrowser",
-        "document render": ["ReactDOM.render()", Key("left")],
+        # "document import": "ImportDOM",
+        # "document import hash": "ImportHash",
+        # "document import browser": "ImportBrowser",
+        # "document render": ["ReactDOM.render()", Key("left")],
         # commands for redux
-        "store import": "ImportRedux",
-        "store logger": "ImportLogger",
-        "store think": "ImportThunk",
-        "store combine": "ImportReducers",
-        "store create": "MakeStore",
+        # "store import": "ImportRedux",
+        # "store logger": "ImportLogger",
+        # "store think": "ImportThunk",
+        # "store combine": "ImportReducers",
+        # "store create": "MakeStore",
         # commands for react-redux
-        "combo provider": "ImportProvider",
+        #"combo provider": "ImportProvider",
+
+        # misc
+
     }
 )

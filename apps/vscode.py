@@ -99,8 +99,8 @@ context.keymap(
         "delete line": Key('cmd-shift-k'),
         "line below": Key('cmd-enter'),
         "line above": Key('cmd-shift-enter'),  
-        "indent": [Key('cmd-left'), Key('tab')],
-        "outdent": [Key('cmd-left'), Key('shift-tab')],
+        "indent": Key('tab'),
+        "outdent": Key('shift-tab'),
         "match (bracket | pair)": Key('cmd-shift-\\'),
 
         # Rich languages editing
@@ -112,10 +112,10 @@ context.keymap(
         "new window": Key('shift-cmd-n'),
         # "close editor": Key('cmd-w'),
         "close folder": Key('cmd-k f'),
-        "split (editor | screen)": Key('cmd-/'),
+        "split (editor | screen)": Key('cmd-\\'),
         "first (pane | group)": Key('cmd-1'),
         "second (pane | group)": Key('cmd-2'),
-        "third (pane | group)": Key('cmd-3'),
+        #"third (pane | group)": Key('cmd-3'),
         "next pane": Key('cmd-k cmd-shift-right'),
         "(prior | previous | un) pane": Key('cmd-k cmd-shift-left'),
         # "push pane left": Key('ctrl-cmd-left'),
@@ -124,11 +124,13 @@ context.keymap(
         # various
         "comment": Key("cmd-/"),
         "search all": Key("cmd-shift-f"),
-        "(drop-down | drop)": Key("ctrl-space"),
+        #"(drop-down | drop)": Key("ctrl-space"),
 
         # terminal
         "terminal": Key('ctrl-`'),
-        #"npm start": "npm start",
-        #"npm run develop": "npm run dev",
+        "package manager start": "npm start",
+        "package manager develop": "npm run dev",
+        "package manager install": "npm install",
+        "package manager <dgndictation>": ["npm ", text],
     }
 )

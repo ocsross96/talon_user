@@ -153,8 +153,12 @@
 
 
     "colour": "color",
+    "bottom": "button",
+    "leeds": "leads",
     "negative": "false",
     "nil": "null",
     "jason": "json",
-    "prop types": "propTypes"
+    "consul": "console",
+    "stylish": "style",
+    "moodle": "modal"
 }
