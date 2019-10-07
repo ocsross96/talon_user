@@ -79,24 +79,9 @@ context.keymap(
         "op or": " || ",
         # utility snippets
         "log": "log",
-        "log error": "logE",
-        "log object": "logD",
-        "axe": "ImportAxios",
-        "require": "requireMOD",
-        # commands for express
-        # "express import": "ImportExpress",
-        # "express initialize": "InitializeApplication",
-        # "expressive initialize": "InitializeRouter",
-        # "expressive use": "ExpressRouterUse",
-        # "express use": "ExpressApplicationUse",
-        # "express callback": "ExpressRouteCb",
-        # "expressive route": "RouterRoute",
-        # "express route": "ApplicationRoute",
-        # commands for sequelize
-        # "model import": "ImportDB",
-        # "model initialize": "DBInit",
-        # "model equalize": "Sequelize",
-        # "model nag": "allowNull",
+
+        # commands for dom interaction
+        "document query selector": "document.querySelector",
 
         # commands for es6 imports
         "import react": "import React from 'react';",

@@ -94,13 +94,18 @@ context.keymap(
 
         "[switch] line up" + optional_numerals: repeat_function(2, "alt-up"),
         "[switch] line down" + optional_numerals: repeat_function(2, "alt-down"),
+
         "copy [line] down": Key('shift-alt-down'),
         "copy [line] up": Key('shift-alt-up'),
+
         "delete line": Key('cmd-shift-k'),
+
         "line below": Key('cmd-enter'),
-        "line above": Key('cmd-shift-enter'),  
+        "line above": Key('cmd-shift-enter'),
+
         "indent": Key('tab'),
         "outdent": Key('shift-tab'),
+
         "match (bracket | pair)": Key('cmd-shift-\\'),
 
         # Rich languages editing
@@ -110,7 +115,6 @@ context.keymap(
 
         # Editor management
         "new window": Key('shift-cmd-n'),
-        # "close editor": Key('cmd-w'),
         "close folder": Key('cmd-k f'),
         "split (editor | screen)": Key('cmd-\\'),
         "first (pane | group)": Key('cmd-1'),
