@@ -3,7 +3,7 @@
 
 # import eye
 import time
-from talon import ctrl, tap, ui
+from talon import cron, ctrl, tap, ui
 from talon.voice import Context, Key
 
 ctx = Context("mouse")
@@ -65,13 +65,23 @@ def delayed_dubclick(m):
 def delayed_tripclick(m):
     delayed_click(m, button=0, times=3)
 
-
 def mouse_scroll(amount):
     def scroll(m):
         ctrl.mouse_scroll(y=amount)
 
     return scroll
 
+def mouse_scroll_continuous(amount):
+    def scroll(m):
+        global scrollAmount
+        # print("amount is", amount)
+        if (scrollAmount >= 0) == (amount >= 0):
+            scrollAmount += amount
+        else:
+            scrollAmount = amount
+        ctrl.mouse_scroll(y=amount)
+
+    return scroll
 
 def mouse_drag(m):
     x, y = click_pos(m)
@@ -110,6 +120,25 @@ def control_shift_click(m, button=0, times=1):
     ctrl.mouse_click(x, y, button=button, times=times, wait=16000)
     ctrl.key_press("shift", ctrl=True, shift=True, up=True)
 
+# adapted from
+# https://github.com/anonfunc/talon-user/blob/ad146e2411745b24817377c325ead6cfc8c9b9db/misc/mouse.py
+
+def scrollMe():
+    global scrollAmount
+    if scrollAmount:
+        ctrl.mouse_scroll(by_lines=False, y=scrollAmount / 10)
+
+def startScrolling(m):
+    global scrollJob
+    scrollJob = cron.interval("60ms", scrollMe)
+
+def stopScrolling(m):
+    global scrollAmount, scrollJob
+    scrollAmount = 0
+    cron.cancel(scrollJob)
+
+scrollAmount = 0
+scrollJob = None
 
 keymap = {
     # jsc modified with some voice-code compatibility
@@ -131,6 +160,9 @@ keymap = {
     "wheel down here": [mouse_center, mouse_scroll(200)],
     "wheel up here": [mouse_center, mouse_scroll(-200)],
     "mouse center": mouse_center,
+    "wheel down continuous": [mouse_scroll_continuous(10), startScrolling],
+    "wheel up continuous": [mouse_scroll_continuous(-10), startScrolling],
+    "wheel stop": stopScrolling
 }
 
 ctx.keymap(keymap)

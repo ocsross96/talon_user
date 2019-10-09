@@ -49,7 +49,7 @@ formatters = normalise_keys(
             True,
             lambda i, word, _: "@" + word if i == 0 else word.capitalize(),
         ),
-        "(criff | criffed)": (True, lambda i, word, _: word.capitalize()),
+        "(criff | criffed | todd)": (True, lambda i, word, _: word.capitalize()),
         "tridal": (False, lambda i, word, _: word.capitalize()),
         "snake": (True, lambda i, word, _: word if i == 0 else "_" + word),
         "dotsnik": (True, lambda i, word, _: "." + word if i == 0 else "_" + word),

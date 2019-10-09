@@ -160,5 +160,7 @@
     "jason": "json",
     "consul": "console",
     "stylish": "style",
-    "moodle": "modal"
+    "moodle": "modal",
+    "gerry": "jest",
+    "hyde": "hide"
 }

@@ -56,6 +56,7 @@ ctx.keymap(
         PREFIX + "log": "git log ",
         PREFIX + "merge [<dgndictation>]": ["git merge ", text],
         PREFIX + "move [<dgndictation>]": ["git mv ", text],
+        PREFIX + "pull origin develop": "git pull origin develop",
         PREFIX + "pull [<dgndictation>]": ["git pull ", text],
         PREFIX
         + "pull (base | re-base | rebase | re base) [<dgndictation>]": [
