@@ -204,9 +204,9 @@ context.keymap(
         # "move tab left way": Key("ctrl-shift-down"),
         # vimium
         "link": link,
-        "move tab left": browser.send_to_vimium("<<"),
-        "move tab right": browser.send_to_vimium(">>"),
-        "move tab new window": browser.send_to_vimium("W"),
+        "move [tab] left": browser.send_to_vimium("<<"),
+        "move [tab] right": browser.send_to_vimium(">>"),
+        "move [tab] new window": browser.send_to_vimium("W"),
         "tab (named | name | by name)": browser.send_to_vimium("T"),
         "tab (named | name | by name) <dgndictation>": [
             browser.send_to_vimium("T"),

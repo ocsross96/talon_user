@@ -153,6 +153,7 @@
 
 
     "colour": "color",
+    "collar": "color",
     "bottom": "button",
     "leeds": "leads",
     "negative": "false",
@@ -162,5 +163,6 @@
     "stylish": "style",
     "moodle": "modal",
     "gerry": "jest",
-    "hyde": "hide"
+    "hyde": "hide",
+    "juror": "jira"
 }

@@ -160,8 +160,8 @@ keymap = {
     "wheel down here": [mouse_center, mouse_scroll(200)],
     "wheel up here": [mouse_center, mouse_scroll(-200)],
     "mouse center": mouse_center,
-    "wheel down continuous": [mouse_scroll_continuous(10), startScrolling],
-    "wheel up continuous": [mouse_scroll_continuous(-10), startScrolling],
+    "continuous wheel down": [mouse_scroll_continuous(10), startScrolling],
+    "continuous wheel up": [mouse_scroll_continuous(-10), startScrolling],
     "wheel stop": stopScrolling
 }
 
