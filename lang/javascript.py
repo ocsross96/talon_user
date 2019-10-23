@@ -102,21 +102,7 @@ context.keymap(
         "react (use context | theseContact)": "useContext",
 
         "prop types upper": "PropTypes",
-        "prop types lower": "propTypes",
-
-        # commands for react dom
-        # "document import": "ImportDOM",
-        # "document import hash": "ImportHash",
-        # "document import browser": "ImportBrowser",
-        # "document render": ["ReactDOM.render()", Key("left")],
-        # commands for redux
-        # "store import": "ImportRedux",
-        # "store logger": "ImportLogger",
-        # "store think": "ImportThunk",
-        # "store combine": "ImportReducers",
-        # "store create": "MakeStore",
-        # commands for react-redux
-        #"combo provider": "ImportProvider",
+        "prop types lower": "propTypes"
 
         # misc
 

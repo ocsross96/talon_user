@@ -164,6 +164,7 @@ keymap = {
     "shell cat [<dgndictation>]": ["cat ", text],
     "shell X args [<dgndictation>]": ["xargs ", text],
     "shell mosh": "mosh ",
+    "shell open": "open .",
     "[shell] mosh {global_terminal.servers}": mosh_servers,
     "[shell] (S S H | SSH) {global_terminal.servers}": ssh_servers,
     # "shell server {terminal.servers}": name_servers,
