@@ -143,5 +143,9 @@ context.keymap(
         "package manager test coverage update": "npm run test:coverage -- -u",
         "package manager <dgndictation>": ["npm ", text],
 
+        # nvm
+        "version manager list": "nvm ls ",
+        "version manager use": "nvm use ",
+        "version manager": "nvm"
     }
 )
