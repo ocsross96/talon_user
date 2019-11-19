@@ -138,9 +138,9 @@ context.keymap(
         "package manager start": "npm start",
         "package manager develop": "npm run dev",
         "package manager install": "npm install",
-        "package manager test": "npm run test",
         "package manager test update": "npm run test -- -u",
         "package manager test coverage update": "npm run test:coverage -- -u",
+        "package manager test": "npm run test",
         "package manager <dgndictation>": ["npm ", text],
 
         # nvm

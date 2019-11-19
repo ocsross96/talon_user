@@ -33,6 +33,7 @@ ctx.keymap(
         PREFIX + "checkout master": "git checkout master",
         PREFIX + "checkout [<dgndictation>]": ["git checkout ", text],
         PREFIX + "checkout branch [<dgndictation>]": ["git checkout -B ", text],
+        PREFIX + "checkout": "git checkout",
         PREFIX + "cherry pick [<dgndictation>]": ["git cherry-pick ", text],
         PREFIX + "commit [<dgndictation>]": ['git commit -m ""', Key("left"), text],
         PREFIX
