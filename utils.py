@@ -356,6 +356,9 @@ def is_filetype(extensions=(), default=False):
         if is_in_bundles(FILETYPE_SENSITIVE_BUNDLES)(app, win):
             if any(ext in win.title for ext in extensions):
                 return True
+            # Fix for vscode not exposing win.title in October 2019 update
+            elif any(ext in win.doc for ext in extensions):
+                return True
             else:
                 return False
         return default
