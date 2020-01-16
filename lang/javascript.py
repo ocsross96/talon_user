@@ -80,7 +80,7 @@ context.keymap(
         # utility snippets
         "log": "log",
 
-        # commands for dom interaction
+        # commands for vanilla dom interaction
         "document query selector": "document.querySelector",
 
         # commands for es6 imports
@@ -102,9 +102,10 @@ context.keymap(
         "react (use context | theseContact)": "useContext",
 
         "prop types upper": "PropTypes",
-        "prop types lower": "propTypes"
+        "prop types lower": "propTypes",
 
         # misc
-
+        "new regular expression constructor": ["new RegExp()", Key("left")],
+        "(console.log | console log)": ["console.log();", Key("left"), Key("left")]
     }
 )

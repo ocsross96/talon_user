@@ -1033,6 +1033,8 @@ context.keymap(
       # misc elements
       # --------------------------------------------------
 
-        "pixel": "px"
+        "pixel": "px",
+        "center": "center",
+        "centre": "center"
     }
 )

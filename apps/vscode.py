@@ -133,18 +133,19 @@ context.keymap(
         # terminal
         "terminal cancel": Key('ctrl-c'),
         "terminal": Key('ctrl-`'),
+        "serve": ["serve", Key('enter')],
 
         # npm
-        "package manager start": "npm start",
-        "package manager develop": "npm run dev",
-        "package manager install": "npm install",
-        "package manager test update": "npm run test -- -u",
-        "package manager test coverage update": "npm run test:coverage -- -u",
-        "package manager test": "npm run test",
+        "package manager start": ["npm start", Key('enter')],
+        "package manager develop": ["npm run dev", Key('enter')],
+        "package manager install": ["npm install", Key('enter')],
+        "package manager test update": ["npm run test -- -u", Key('enter')],
+        "package manager test coverage update": ["npm run test:coverage -- -u", Key('enter')],
+        "package manager test": ["npm run test", Key('enter')],
         "package manager <dgndictation>": ["npm ", text],
 
         # nvm
-        "version manager list": "nvm ls ",
+        "version manager list": ["nvm ls ", Key('enter')],
         "version manager use": "nvm use ",
         "version manager": "nvm"
     }

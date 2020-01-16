@@ -192,6 +192,7 @@ context.keymap(
         "copy": Key("cmd-c"),
         "paste": Key("cmd-v"),
         "paste same style": Key("cmd-alt-shift-v"),
+        "paste special": Key("cmd-shift-v"),
         # "mendeley": Key("cmd-shift-m"),
         "(add | save) to mendeley": mendeley,
         # TODO: this should probably be specific to the page
@@ -219,6 +220,7 @@ context.keymap(
 
         # my commands
         "screenshot": Key("cmd-shift-4"),
+        "screenshot copy": Key("cmd-ctrl-shift-4")
     } 
 )
 
