@@ -40,10 +40,6 @@ formatters = normalise_keys(
             True,
             lambda i, word, _: word.upper() if i == 0 else "_" + word.upper(),
         ),
-        "dollcram": (
-            True,
-            lambda i, word, _: "$" + word if i == 0 else word.capitalize(),
-        ),
         "champ": (True, lambda i, word, _: word.capitalize() if i == 0 else " " + word),
         "lowcram": (
             True,

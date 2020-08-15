@@ -162,7 +162,10 @@ keymap = {
     "mouse center": mouse_center,
     "continuous wheel down": [mouse_scroll_continuous(10), startScrolling],
     "continuous wheel up": [mouse_scroll_continuous(-10), startScrolling],
-    "wheel stop": stopScrolling
+    "wheel stop": stopScrolling,
+
+    'screenshot copy': Key('cmd-shift-ctrl-4'),
+    'screenshot': Key('cmd-shift-4')
 }
 
 ctx.keymap(keymap)

@@ -33,11 +33,10 @@ context.keymap(
         "let [<dgndictation>]": ["let ", text],
         "static": "static ",
         "args": ["()", Key("left")],
-        "index": ["[]", Key("left")],
         # "block": [" {}", Key("left enter enter up tab")],
         "empty array": "[]",
         "empty object": "{}",
-        "call": "()",
+        # "call": "()",
         "state func": "function ",
         "state return": "return ",
         "state constructor": "constructor ",
@@ -79,16 +78,21 @@ context.keymap(
         "op or": " || ",
         # utility snippets
         "log": "log",
+        "class name": "className",
 
         # commands for vanilla dom interaction
         "document query selector": "document.querySelector",
 
         # commands for es6 imports
+        "import react helmet": "import Helmet from 'react-helmet';",
+        "import react router": "import { } from 'react-router-dom';",
         "import react": "import React from 'react';",
+
         "import prop types": "import PropTypes from 'prop-types';",
         "import CSS module": "import style from './style.module.scss';",
         "import classNames": "import classNames from 'classnames';",
         "import <dgndictation>": ["import ", text, " from ", Key("command right")],
+        "import": "import",
 
         # commands for react
         "react fragment": ["<></>", Key("left left left")],

@@ -70,26 +70,37 @@ context.keymap(
         "Go to line": Key("ctrl-g"),
         # "line up" + optional_numerals: repeat_function(2, "alt-up"),
         # "line down" + optional_numerals: repeat_function(2, "alt-down"),
+
         # Navigating Interface
+        "master special": Key("shift-cmd-p"),
+        "master": Key("cmd-p"),
+        "go to file <dgndictation>": [Key("cmd-p"), text],
+
         "explore tab": Key("shift-cmd-e"),
         "search tab": Key("shift-cmd-f"),
         "debug tab": Key("shift-cmd-d"),
         "source control tab": Key("shift-ctrl-g"),
         "extensions tab": Key("shift-cmd-x"),
-        "go to file <dgndictation>": [Key("cmd-p"), text],
-        "master": Key("cmd-p"),
+
+        # toggle sidebar visibility
+        "sidebar toggle": Key("cmd-b"), 
+
         # tabbing
-        # "stiffy": Key("cmd-alt-left"),
         "next tab | goneck": Key("cmd-alt-right"),
-        # "stippy": Key("cmd-alt-right"),
         "last tab | gopreev": Key("cmd-alt-left"),
+
         "new tab | new file": Key("cmd-n"),
         "jump" + optional_numerals: jump_tabs,
+
         # Menu
+        "save without formatting": [Key("cmd-k"), Key("s")],
         "save": Key("cmd+s"),
         "open": Key("cmd+o"),
         "close": Key("cmd-w"),
+
+    
         # editing
+
         # "bracken": [Key("cmd-shift-ctrl-right")],
 
         "[switch] line up" + optional_numerals: repeat_function(2, "alt-up"),
@@ -109,7 +120,7 @@ context.keymap(
         "match (bracket | pair)": Key('cmd-shift-\\'),
 
         # Rich languages editing
-        "[trigger] suggestion": Key('ctrl-space'),
+        "([trigger] suggestion | suggest)": Key('ctrl-space'),
         "format document": Key('shift-alt-f'),
         "format selection": Key('cmd-k cmd-f'),
 
@@ -128,25 +139,36 @@ context.keymap(
         # various
         "comment": Key("cmd-/"),
         "search all": Key("cmd-shift-f"),
-        #"(drop-down | drop)": Key("ctrl-space"),
+        # "(drop-down | drop)": Key("ctrl-space"),
 
         # terminal
         "terminal cancel": Key('ctrl-c'),
         "terminal": Key('ctrl-`'),
+        "terminal password": ["changeme96", Key('enter')],
         "serve": ["serve", Key('enter')],
 
         # npm
         "package manager start": ["npm start", Key('enter')],
         "package manager develop": ["npm run dev", Key('enter')],
-        "package manager install": ["npm install", Key('enter')],
+        "package manager install": "npm install",
         "package manager test update": ["npm run test -- -u", Key('enter')],
         "package manager test coverage update": ["npm run test:coverage -- -u", Key('enter')],
+        "package manager test coverage": ["npm run test:coverage", Key('enter')],
+        "package manager test watch": ["npm run test:watch", Key('enter')],
         "package manager test": ["npm run test", Key('enter')],
+        "package manager bootstrap": ["npm run bootstrap", Key('enter')],
+        "package manager storybook": ["npm run storybook", Key('enter')],
+        "package manager remove modules": ["rm -rf node_modules", Key('enter')],
         "package manager <dgndictation>": ["npm ", text],
 
         # nvm
         "version manager list": ["nvm ls ", Key('enter')],
         "version manager use": "nvm use ",
-        "version manager": "nvm"
+        "version manager": "nvm",
+
+        # docker 
+        "docker compose build": ["docker-compose build", Key('enter')],
+        "docker compose up": ["docker-compose up", Key('enter')],
+        "docker compose": "docker-compose"
     }
 )

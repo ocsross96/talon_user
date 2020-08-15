@@ -219,8 +219,8 @@ context.keymap(
         "open most recently downloaded file": open_most_recently_downloaded_file,
 
         # my commands
-        "screenshot": Key("cmd-shift-4"),
-        "screenshot copy": Key("cmd-ctrl-shift-4")
+        # "screenshot": Key("cmd-shift-4"),
+        # "screenshot copy": Key("cmd-ctrl-shift-4")
     } 
 )
 
